@@ -21,61 +21,59 @@
       </ul>
     </nav>
     <form action="http://localhost:8000/add/" method="POST">
-      <div class="mt-4 flex justify-center">
+      <div class="mt-4 flex gap-12 items-center justify-center">
         <div class="mb-3 space-y-4 xl:w-96">
           <div class="form-group mb-6">
             <label
-              for="user-input"
+              for="username"
               class="form-label inline-block mb-2 text-gray-700"
               >User</label
             >
             <input
               type="text"
               class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              id="user-input"
-              name="user-input"
+              id="user"
+              name="user"
               placeholder="Enter Username"
             />
             <small class="block mt-1 text-xs text-gray-600"
               >The movies you enter will be saved with this username</small
             >
           </div>
-          <label
-            for="favourites"
-            class="form-label inline-block mb-2 text-gray-700"
-            >Favourites</label
+          <label for="name" class="form-label inline-block mb-2 text-gray-700"
+            >Movie Name:</label
           >
           <textarea
             class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="favourites"
-            name="favourites"
-            rows="3"
-            placeholder="Add your favourites..."
+            id="name"
+            name="name"
+            rows="1"
+            placeholder="Enter movie name..."
           ></textarea>
           <label
-            for="watched"
+            for="director"
             class="form-label inline-block mb-2 text-gray-700"
-            >Watched</label
+            >Director:</label
           >
           <textarea
             class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="watched"
-            name="watched"
-            rows="3"
-            placeholder="Add already watched movies"
+            id="director"
+            name="director"
+            rows="1"
+            placeholder="Enter movie director..."
           ></textarea>
-          <label
-            for="watchlist"
-            class="form-label inline-block mb-2 text-gray-700"
-            >Watchlist</label
+          <label for="year" class="form-label inline-block mb-2 text-gray-700"
+            >Year Released:</label
           >
-          <textarea
+          <input
+            type="number"
+            min="1980"
+            max="2030"
             class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="watchlist"
-            name="watchlist"
-            rows="3"
-            placeholder="Add to your watchlist"
-          ></textarea>
+            id="year"
+            name="year"
+            placeholder="Enter year of movie release..."
+          />
           <button
             type="submit"
             class="px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
@@ -83,12 +81,15 @@
             Add
           </button>
         </div>
+        <div class="space-y-8">
+          <input type="checkbox" name="is_watched" id="is_watched" />
+          <label for="is_watched">Watched</label><br />
+          <input type="checkbox" name="is_favourite" id="is_favourite" />
+          <label for="is_favourite">Favourite</label><br />
+          <input type="checkbox" name="on_watchlist" id="on_watchlist" />
+          <label for="on_watchlist">Watchlist</label>
+        </div>
       </div>
     </form>
   </body>
-
-  <script>
-
-    
-  </script>
 </html>

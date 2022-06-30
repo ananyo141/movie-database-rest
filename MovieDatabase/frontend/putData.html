@@ -20,57 +20,59 @@
         </li>
       </ul>
     </nav>
-
-    <form action="">
+    <form action="http://localhost:8000/add/" method="POST">
       <div class="mt-4 flex justify-center">
         <div class="mb-3 space-y-4 xl:w-96">
           <div class="form-group mb-6">
             <label
-              for="exampleInputEmail1"
+              for="user-input"
               class="form-label inline-block mb-2 text-gray-700"
               >User</label
             >
             <input
               type="text"
               class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              id="user-input"
+              name="user-input"
               placeholder="Enter Username"
             />
-            <small id="emailHelp" class="block mt-1 text-xs text-gray-600"
+            <small class="block mt-1 text-xs text-gray-600"
               >The movies you enter will be saved with this username</small
             >
           </div>
           <label
-            for="exampleFormControlTextarea1"
+            for="favourites"
             class="form-label inline-block mb-2 text-gray-700"
             >Favourites</label
           >
           <textarea
             class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="exampleFormControlTextarea1"
+            id="favourites"
+            name="favourites"
             rows="3"
             placeholder="Add your favourites..."
           ></textarea>
           <label
-            for="exampleFormControlTextarea1"
+            for="watched"
             class="form-label inline-block mb-2 text-gray-700"
             >Watched</label
           >
           <textarea
             class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="exampleFormControlTextarea1"
+            id="watched"
+            name="watched"
             rows="3"
             placeholder="Add already watched movies"
           ></textarea>
           <label
-            for="exampleFormControlTextarea1"
+            for="watchlist"
             class="form-label inline-block mb-2 text-gray-700"
             >Watchlist</label
           >
           <textarea
             class="form-control block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-            id="exampleFormControlTextarea1"
+            id="watchlist"
+            name="watchlist"
             rows="3"
             placeholder="Add to your watchlist"
           ></textarea>

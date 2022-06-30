@@ -19,7 +19,13 @@ def getDataUser(request, pk):
 
 @api_view(['POST'])
 def addData(request):
+    user = User.objects.get_or_create(username=request.data['user-input'])[0]
+
+    Movie.objects.create(user=user, name=request.data['favourites'], director=request.data['watched'], year=3232)
+    #, year=request.data['year'],
+    # is_watched=, is_favourite=, on_watchlist=)
+
     serializer = MovieSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
-    return Response(serializer.data)
+    return Response(request.data)

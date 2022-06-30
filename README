@@ -1,0 +1,5 @@
+*A Movie Database Application with Django Rest Framework*
+
+Uses django and rest-framework as backend and html-css-javascript as the frontend, with a touch of tailwindcss for the styling.
+
+Mainly created for learning purpose

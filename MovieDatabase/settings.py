@@ -80,6 +80,8 @@ WSGI_APPLICATION = 'MovieDatabase.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+import dj_database_url
+
 DATABASES = {
         'default': dj_database_url.config(),
 }

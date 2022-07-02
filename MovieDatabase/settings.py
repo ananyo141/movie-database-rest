@@ -81,10 +81,18 @@ WSGI_APPLICATION = 'MovieDatabase.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 import dj_database_url
-
-DATABASES = {
-        'default': dj_database_url.config(),
-}
+    
+try:
+    DATABASES = {
+            'default': dj_database_url.config(),
+    }
+except:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
 
 
 # Password validation

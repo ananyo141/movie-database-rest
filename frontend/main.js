@@ -1,7 +1,9 @@
 let getall = async () => {
   let username = document.getElementById("userinput").value;
   if (username) username += "/";
-  let response = await fetch(`http://127.0.0.1:8000/${username}`);
+  let response = await fetch(
+    `http://movie-database-rest.herokuapp.com/${username}`
+  );
   let movies = await response.json();
   console.log("Response: ", JSON.stringify(movies));
   movies = movies.filter((e) => e.user);
